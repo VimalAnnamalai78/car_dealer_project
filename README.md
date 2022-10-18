@@ -30,6 +30,7 @@ uvicorn main:app --reload
 ```commandline
 http://127.0.0.1:8000/docs
 ```
+
 #API ROUTES FOR DEALER
     POST - http://localhost:8000/dealer/signup
     PUT  - http://localhost:8000/cars
