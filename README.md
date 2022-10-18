@@ -32,22 +32,22 @@ http://127.0.0.1:8000/docs
 ```
 
 #API ROUTES FOR DEALER
-    POST - http://localhost:8000/dealer/signup
-    PUT  - http://localhost:8000/cars
-    GET  - http://localhost:8000/dealer/list
-    GET  - http://localhost:8000/dealer?dealer_mobile=4565152467
-    DEL  - http://localhost:8000/dealer?dealer_mobile=4565152467
-    POST - http://localhost:8000/login
-    PATCH - http://localhost:8000/dealer/forgetpassword
-    PATCH - http://localhost:8000/dealer/resetpassword
+    #POST - http://localhost:8000/dealer/signup
+    #PUT  - http://localhost:8000/cars
+    #GET  - http://localhost:8000/dealer/list
+    #GET  - http://localhost:8000/dealer?dealer_mobile=4565152467
+    #DEL  - http://localhost:8000/dealer?dealer_mobile=4565152467
+    #POST - http://localhost:8000/login
+    #PATCH - http://localhost:8000/dealer/forgetpassword
+    #PATCH - http://localhost:8000/dealer/resetpassword
 
 
 #API ROUTES FOR CARS
-    POST - http://localhost:8000/cars
-    PUT  - http://localhost:8000/cars
-    GET  - http://localhost:8000/cars/list
-    GET  - http://localhost:8000/cars?reg_num=XX 07 34099
-    DEL  - http://localhost:8000/cars?reg_num=XX 07 3408
+    #POST - http://localhost:8000/cars
+    #PUT  - http://localhost:8000/cars
+    #GET  - http://localhost:8000/cars/list
+    #GET  - http://localhost:8000/cars?reg_num=XX 07 34099
+    #DEL  - http://localhost:8000/cars?reg_num=XX 07 3408
 
 #Note:
     # Why FastApi?
