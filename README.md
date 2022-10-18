@@ -32,6 +32,7 @@ http://127.0.0.1:8000/docs
 ```
 
 #API ROUTES FOR DEALER
+```commandline
     # POST - http://localhost:8000/dealer/signup
     # PUT  - http://localhost:8000/cars
     # GET  - http://localhost:8000/dealer/list
@@ -40,16 +41,20 @@ http://127.0.0.1:8000/docs
     # POST - http://localhost:8000/login
     # PATCH - http://localhost:8000/dealer/forgetpassword
     # PATCH - http://localhost:8000/dealer/resetpassword
+```
 
 
 #API ROUTES FOR CARS
+```commandline
     # POST - http://localhost:8000/cars
     # PUT  - http://localhost:8000/cars
     # GET  - http://localhost:8000/cars/list
     # GET  - http://localhost:8000/cars?reg_num=XX 07 34099
     # DEL  - http://localhost:8000/cars?reg_num=XX 07 3408
+```
 
 #Note:
+```commandline
     # Why FastApi?
         Frank Answer is :-Since it is a minimalistic  & quick project. Moreover during my experience 
         i worked with django but not with Fastapi also i used this chance to learn this framework.
@@ -63,4 +68,4 @@ http://127.0.0.1:8000/docs
          2) Hiding passwords in response
          3) Before creating a dealer shouldn't allow to create a car.
          4) API authorization not added for many API endpoint except /restpassword because i need time to test.
-    
+```
