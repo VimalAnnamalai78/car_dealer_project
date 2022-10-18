@@ -11,6 +11,14 @@ router = APIRouter()
 
 @router.post(path='')
 def login(request: schemas.Login, db: Session = Depends(connection_db.get_db)):
+    """
+    Login validation method.
+
+    :param request: Payload with mobile number & password of a dealer.
+    :param db: Database Session.
+    :return: Confirmation response with status code.
+    """
+
     dealer = db.query(models.Dealers).filter(
         models.Dealers.dealer_mobile == request.dealer_mobile)
     if not dealer.first():

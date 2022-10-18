@@ -1,6 +1,6 @@
 from sqlalchemy import Column, Integer, String, Enum, Boolean, DateTime, ForeignKey, DateTime, VARCHAR, Text, JSON
 from .connection_db import Base
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import relationship, backref
 from datetime import datetime
 import enum
 
@@ -25,9 +25,10 @@ class Dealers(Base):
     dealer_address = Column(VARCHAR(120), nullable=False)
     dealer_address = Column(VARCHAR(120), nullable=False)
     access_token = Column(Text)
-    cars = relationship('Cars', backref='Dealers')
+    # cars = relationship('Cars', backref='Dealers', passive_deletes=True)
     # created_on = Column(DateTime, nullable=False, default=datetime.now())
     # updated_on = Column(DateTime, nullable=False, default=datetime.now())
+    cars = relationship('Cars', backref=backref('Dealers', cascade='all,delete'))
 
 
 class Cars(Base):
@@ -53,3 +54,4 @@ class Cars(Base):
     dealer_id = Column(Integer, ForeignKey('dealers.dealer_id'))
     # created_on = Column(DateTime, nullable=False, default=datetime.now())
     # updated_on = Column(DateTime, nullable=False, default=datetime.now())
+    # cars = relationship("Child", cascade="all,delete", backref="parent")
